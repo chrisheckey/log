@@ -22,6 +22,7 @@ type Entry struct {
 	Message   string    `json:"message"`
 	start     time.Time
 	fields    []Fields
+	err		  error
 }
 
 // NewEntry returns a new entry for `log`.
@@ -83,7 +84,14 @@ func (e *Entry) WithError(err error) *Entry {
 		ctx = ctx.WithFields(f.Fields())
 	}
 
+	ctx.err = err // Record Err for Handler Access
+
 	return ctx
+}
+
+// Handler Err Access
+func (e *Entry) Err() error {
+	return e.err
 }
 
 // Debug level message.
@@ -178,5 +186,6 @@ func (e *Entry) finalize(level Level, msg string) *Entry {
 		Level:     level,
 		Message:   msg,
 		Timestamp: Now(),
+		err: e.err,
 	}
 }

@@ -9,6 +9,7 @@ require (
 	github.com/aws/aws-sdk-go v1.20.6
 	github.com/aybabtme/rgbterm v0.0.0-20170906152045-cc83f3b3ce59
 	github.com/fatih/color v1.7.0
+	github.com/getsentry/sentry-go v0.8.0
 	github.com/go-logfmt/logfmt v0.4.0
 	github.com/golang/protobuf v1.3.1 // indirect
 	github.com/google/uuid v1.1.1 // indirect
@@ -25,8 +26,6 @@ require (
 	github.com/tj/go-elastic v0.0.0-20171221160941-36157cbbebc2
 	github.com/tj/go-kinesis v0.0.0-20171128231115-08b17f58cb1b
 	github.com/tj/go-spin v1.1.0
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859 // indirect
 	golang.org/x/text v0.3.2 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
-	gopkg.in/yaml.v2 v2.2.2 // indirect
 )
